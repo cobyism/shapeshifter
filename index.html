@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- data-width="320px" data-height="480px"[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ShapeShifter</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/shapeshifter.css">
+    <script src="scripts/vendor/modernizr.min.js"></script>
+  </head>
+  <body>
+
+    <header class="ss-header">
+      <div class="left">
+        <a href="#" data-width="100%" data-height="100%" class="set-width set-desktop set-portrait selected">Desktop</a>
+        <a href="#" data-width="320px" data-height="480px" class="set-width set-mobile set-portrait iphone-4-portrait">iPhone 3G/4 Portrait</a>
+        <a href="#" data-width="320px" data-height="568px" class="set-width set-mobile set-portrait iphone-5-portrait">iPhone 5 Portrait</a>
+        <a href="#" data-width="480px" data-height="320px" class="set-width set-mobile set-landscape iphone-4-landscape">iPhone 3G/4 Landscape</a>
+        <a href="#" data-width="568px" data-height="320px" class="set-width set-mobile set-landscape iphone-5-landscape">iPhone 5 Landscape</a>
+        <a href="#" data-width="768px" data-height="1024px" class="set-width set-tablet set-portrait ipad-portrait">iPad Portrait</a>
+        <a href="#" data-width="1024" data-height="768px" class="set-width set-tablet set-landscape ipad-landscape">iPad Landscape</a>
+      </div>
+      <div class="right">
+        <a href="../">Exit</a>
+      </div>
+    </header>
+    <section>
+      <div class="frame-wrapper auto">
+        <div class="device-inner">
+          <iframe src="../" class="ss-iframe">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
+
+    <script src="../scripts/shapeshifter.js"></script>
+  </body>
+</html>
+
