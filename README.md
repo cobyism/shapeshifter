@@ -3,6 +3,8 @@
 Shapeshifter is an in-browser responsive testing environment.
 Here’s [a demonstration](http://cobyism.com/shapeshifter).
 
+![Shapeshifter](http://cl.ly/McUD/ShapeShifter.jpg)
+
 ## Why use Shapeshifter?
 
 Responsive design for the web requires thought throughout **the entire** design
