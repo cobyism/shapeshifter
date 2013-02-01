@@ -33,6 +33,9 @@ header {
   clear: left;
   text-align: center;
   vertical-align: middle;
+}
+
+.controls a, .controls .orientation-toggle.disabled {
   opacity: .5;
 }
 

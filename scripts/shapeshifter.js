@@ -1,58 +1,61 @@
-$(document).on('click', '.set-width', function(event) {
-  $('.frame-inner').css('width', $(this).attr('data-width')).css('height', $(this).attr('data-height'));
-  $('.frame-wrapper').css('width', $(this).attr('data-width')).css('height', $(this).attr('data-height'));
-  $('.selected').removeClass('selected');
+$(document).on('click', '.set-desktop, .set-mobile', function(event){
+  $('.controls a').removeClass('selected');
   $(this).addClass('selected');
-  if ($('.frame-wrapper').hasClass('landscape')){
-    invertDimentions()
-  }
-  return false;
 });
 
 $(document).on('click', '.set-desktop', function(event) {
-  $('.frame-wrapper').removeClass('mobile').removeClass('tablet').addClass('desktop');
-  return false;
+  $('.frame-wrapper')
+    .removeClass('mobile')
+    .removeClass('iphone-4')
+    .removeClass('iphone-5')
+    .removeClass('ipad')
+    .addClass('desktop');
+  $('.orientation-toggle').addClass('disabled')
 });
 
 $(document).on('click', '.set-mobile', function(event) {
-  $('.frame-wrapper').removeClass('desktop').removeClass('tablet').addClass('mobile');
-  return false;
+  $('.frame-wrapper')
+    .removeClass('desktop')
+    .addClass('mobile');
+  $('.orientation-toggle').removeClass('disabled')
 });
 
-$(document).on('click', '.set-tablet', function(event) {
-  $('.frame-wrapper').removeClass('desktop').removeClass('mobile').addClass('tablet');
-  return false;
+$(document).on('click', '.set-iphone-4', function(event) {
+  $('.frame-wrapper')
+    .removeClass('iphone-5')
+    .removeClass('ipad')
+    .addClass('iphone-4');
 });
 
-$(document).on('click', '.orientation-portrait', function(event) {
-  $('.frame-wrapper').removeClass('landscape');
+$(document).on('click', '.set-iphone-5', function(event) {
+  $('.frame-wrapper')
+    .removeClass('iphone-4')
+    .removeClass('ipad')
+    .addClass('iphone-5');
+});
+
+$(document).on('click', '.set-ipad', function(event) {
+  $('.frame-wrapper')
+    .removeClass('iphone-4')
+    .removeClass('iphone-5')
+    .addClass('ipad');
+});
+
+$(document).on('click', '.orientation-toggle', function(event) {
+  var set = 'landscape';
+  var remove = 'portrait';
+  if ($('.frame-wrapper').hasClass(set)){
+    set = 'portrait';
+    remove = 'landscape';
+  }
+  $('.frame-wrapper').removeClass(remove);
   $('.orientation-toggle')
-    .addClass('orientation-landscape')
-    .removeClass('orientation-portrait')
-  invertDimentions()
-  return false;
-});
-
-$(document).on('click', '.orientation-landscape', function(event) {
-  $('.frame-wrapper').addClass('landscape');
-  $('.orientation-toggle')
-    .addClass('orientation-portrait')
-    .removeClass('orientation-landscape')
-  invertDimentions()
-  return false;
+    .addClass(set)
+    .removeClass(remove)
 });
 
 $(document).ready(function(){
   if (window.location.pathname == '/'){
-    $('.frame').attr('src', 'docs.html')
+    $('.frame').attr('src', 'docs.html');
   }
 });
-
-invertDimentions = function(){
-  $([$('.frame-inner'), $('.frame-wrapper')]).each(function(){
-    width = $(this).css('width')
-    height = $(this).css('height')
-    $(this).css('width', height)
-    $(this).css('height', width)
-  });
-}
