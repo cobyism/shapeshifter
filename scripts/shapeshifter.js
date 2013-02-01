@@ -58,3 +58,11 @@ $(document).ready(function(){
     $('.frame').attr('src', '../');
   }
 });
+
+/* Keyboard shortcuts */
+
+$(document).bind('keydown', 'alt+shift+u', function(){$('.set-desktop').click()});
+$(document).bind('keydown', 'alt+shift+i', function(){$('.set-iphone-4').click()});
+$(document).bind('keydown', 'alt+shift+o', function(){$('.set-iphone-5').click()});
+$(document).bind('keydown', 'alt+shift+p', function(){$('.set-ipad').click()});
+$(document).bind('keydown', 'alt+shift+l', function(){$('.orientation-toggle').click()});
