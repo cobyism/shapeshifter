@@ -3,7 +3,7 @@
 Shapeshifter is an in-browser responsive testing environment.
 Here’s [a demonstration](http://cobyism.com/shapeshifter).
 
-![Shapeshifter](http://cl.ly/McUD/ShapeShifter.jpg)
+![Shapeshifter](http://cl.ly/MatS/shapeshifter-demo.gif)
 
 ## Why use Shapeshifter?
 
