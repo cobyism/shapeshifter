@@ -46,7 +46,7 @@ header {
 /* Workspace and frames */
 
 .workspace {
-  background-image: url(../images/subtle_dots_@2x.png);
+  background-image: url(../images/subtle_dots.png);
   background-size: 27px 15px;
   overflow: auto;
   position: fixed;
