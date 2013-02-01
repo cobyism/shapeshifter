@@ -100,13 +100,25 @@ header {
 
 .mobile {
   margin: 30px;
-  padding: 90px 20px;
   border-radius: 25px;
 }
 
-.mobile.landscape {
-  padding: 20px 90px;
+.iphone-4 {
+  padding: 106px 12px 109px;
 }
+
+.iphone-4.landscape {
+  padding: 12px 109px 12px 106px;
+}
+
+.iphone-5 {
+  padding: 104px 18px 98px;
+}
+
+.iphone-5.landscape {
+  padding: 18px 98px 18px 104px;
+}
+
 
 .desktop {
   padding: 50px 0 0;
@@ -115,4 +127,49 @@ header {
 
 .desktop .frame {
   border-radius: 0 0 5px 5px;
+}
+
+.iphone-4 {
+  width: 320px;
+  height: 480px;
+}
+
+.iphone-5 {
+  width: 320px;
+  height: 568px;
+}
+
+.ipad {
+  width: 768px;
+  height: 1024px;
+  padding: 40px;
+}
+
+.iphone-4.landscape {
+  height: 320px;
+  width: 480px;
+}
+
+.iphone-5.landscape {
+  height: 320px;
+  width: 568px;
+}
+
+.ipad.landscape {
+  height: 768px;
+  width: 1024px;
+}
+
+/* Orientation toggle */
+
+.controls a {
+  -webkit-transition: all .3s ease-in-out;
+}
+
+.landscape .set-mobile {
+  -webkit-transform: rotate(-90deg);
+}
+
+.landscape .orientation-toggle {
+  -webkit-transform: rotate(90deg);
 }

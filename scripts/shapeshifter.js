@@ -42,16 +42,15 @@ $(document).on('click', '.set-ipad', function(event) {
 });
 
 $(document).on('click', '.orientation-toggle', function(event) {
-  var set = 'landscape';
-  var remove = 'portrait';
-  if ($('.frame-wrapper').hasClass(set)){
-    set = 'portrait';
-    remove = 'landscape';
+  if (!$('.orientation-toggle').hasClass('disabled')){
+    if ($('.frame-wrapper').hasClass('landscape')){
+      $('.frame-wrapper').removeClass('landscape');
+      $('.controls').removeClass('landscape');
+    } else {
+      $('.frame-wrapper').addClass('landscape');
+      $('.controls').addClass('landscape');
+    }
   }
-  $('.frame-wrapper').removeClass(remove);
-  $('.orientation-toggle')
-    .addClass(set)
-    .removeClass(remove)
 });
 
 $(document).ready(function(){
