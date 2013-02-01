@@ -1,3 +1,5 @@
+$(document).on('click', '.controls a', false);
+
 $(document).on('click', '.set-desktop, .set-mobile', function(event){
   $('.controls a').removeClass('selected');
   $(this).addClass('selected');
