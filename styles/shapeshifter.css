@@ -1,9 +1,13 @@
+/* Resets */
+
 * { box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
 
 html, body {
   padding: 0;
   margin: 0;
 }
+
+/* Sidebar controls */
 
 header {
   font-size: 16px;
@@ -16,12 +20,12 @@ header {
   text-align: center;
 }
 
-.viewport-controls {
+.controls {
   display: inline-block;
   margin: 10px 0 0;
 }
 
-.viewport-controls a {
+.controls a {
   width: 32px;
   height: 32px;
   margin: 5px;
@@ -32,9 +36,11 @@ header {
   opacity: .5;
 }
 
-.viewport-controls a.selected, .viewport-controls .orientation-toggle {
+.controls a.selected, .controls .orientation-toggle {
   opacity: 1;
 }
+
+/* Workspace and frames */
 
 .workspace {
   background-image: url(../images/subtle_dots_@2x.png);
@@ -70,39 +76,6 @@ header {
   transition: all .25s ease-out;
 }
 
-.mobile, .tablet, .desktop {
-  background: #f3f3f3;
-  position: relative;
-  overflow: hidden;
-}
-
-.mobile, .tablet {
-  margin: 30px;
-}
-
-.desktop {
-  padding: 50px 0 0;
-  border-radius: 5px;
-}
-
-.desktop .frame {
-  border-radius: 0 0 5px 5px;
-}
-
-.mobile {
-  padding: 90px 20px;
-  border-radius: 25px;
-}
-
-.tablet {
-  padding: 60px;
-  border-radius: 40px;
-}
-
-.mobile.landscape {
-  padding: 20px 90px;
-}
-
 .frame {
   width: 100%;
   height: 100%;
@@ -112,4 +85,31 @@ header {
   border: none;
   background-color: #fff;
   display: block;
+}
+
+/* Device specific styles */
+
+.mobile, .desktop {
+  background: #f3f3f3;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile {
+  margin: 30px;
+  padding: 90px 20px;
+  border-radius: 25px;
+}
+
+.mobile.landscape {
+  padding: 20px 90px;
+}
+
+.desktop {
+  padding: 50px 0 0;
+  border-radius: 5px;
+}
+
+.desktop .frame {
+  border-radius: 0 0 5px 5px;
 }
