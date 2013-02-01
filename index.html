@@ -13,24 +13,33 @@
   </head>
   <body>
 
-    <header class="ss-header">
-      <div class="left">
-        <a href="#" data-width="100%" data-height="100%" class="set-width set-desktop set-portrait selected">Desktop</a>
-        <a href="#" data-width="320px" data-height="480px" class="set-width set-mobile set-portrait iphone-4-portrait">iPhone 3G/4 Portrait</a>
-        <a href="#" data-width="320px" data-height="568px" class="set-width set-mobile set-portrait iphone-5-portrait">iPhone 5 Portrait</a>
-        <a href="#" data-width="480px" data-height="320px" class="set-width set-mobile set-landscape iphone-4-landscape">iPhone 3G/4 Landscape</a>
-        <a href="#" data-width="568px" data-height="320px" class="set-width set-mobile set-landscape iphone-5-landscape">iPhone 5 Landscape</a>
-        <a href="#" data-width="768px" data-height="1024px" class="set-width set-tablet set-portrait ipad-portrait">iPad Portrait</a>
-        <a href="#" data-width="1024" data-height="768px" class="set-width set-tablet set-landscape ipad-landscape">iPad Landscape</a>
-      </div>
-      <div class="right">
-        <a href="../">Exit</a>
+    <header>
+      <div class="viewport-controls">
+        <a href="#" data-width="" data-height=""
+          class="set-width set-desktop set-portrait selected">
+          <img src="images/desktop@2x.png" width="32px" height="32px" />
+        </a>
+        <a href="#" data-width="320px" data-height="480px"
+          class="set-width set-mobile set-portrait iphone-4-portrait">
+          <img src="images/iphone4-portrait@2x.png" width="32px" height="32px" />
+        </a>
+        <a href="#" data-width="320px" data-height="568px"
+          class="set-width set-mobile set-portrait iphone-5-portrait">
+          <img src="images/iphone5-portrait@2x.png" width="32px" height="32px" />
+        </a>
+        <a href="#" data-width="768px" data-height="1024px"
+          class="set-width set-tablet set-portrait ipad-portrait">
+          <img src="images/ipad-portrait@2x.png" width="32px" height="32px" />
+        </a>
+        <a href="#" class="orientation-toggle orientation-portrait">
+          <img src="images/landscape@2x.png" width="32px" height="32px" />
+        </a>
       </div>
     </header>
-    <section>
-      <div class="frame-wrapper auto">
-        <div class="device-inner">
-          <iframe src="../" class="ss-iframe">
+    <section class="workspace">
+      <div class="frame-wrapper auto desktop">
+        <div class="frame-inner">
+          <iframe src="../" class="frame">
           </iframe>
         </div>
       </div>

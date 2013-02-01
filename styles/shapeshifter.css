@@ -3,74 +3,52 @@
 html, body {
   padding: 0;
   margin: 0;
-  width: 100%;
-  height: 100%;
 }
 
 header {
   font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
-  padding: 10px;
-  width: 100%;
-  float: left;
-  box-shadow: 0 1px 10px rgba(0,0,0,.3);
-  background: #aaa;
-  background-image: -webkit-linear-gradient(#bbb, #999);
-  border-bottom: 1px solid #555;
-  height: 55px;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 72px;
+  text-align: center;
 }
 
-a {
-  text-decoration: none;
-  padding: 5px 10px;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  font-weight: bold;
-  float: left;
+.viewport-controls {
   display: inline-block;
-  background: #ddd;
-  background-image: -webkit-linear-gradient(#eee, #ccc);
-  border-left: 1px solid rgba(255,255,255,.8);
-  border-right: 1px solid rgba(0,0,0,.2);
-  box-shadow: 0 -1px 0 rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,1);
+  margin: 10px 0 0;
 }
 
-a.selected {
-  background: #ccc;
-  background-image: -webkit-linear-gradient(#bbb, #ddd);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,.5);
-  border-left: none;
-  border-right: none;
-}
-
-a:first-child {
-  border-radius: 3px 0 0 3px;
-}
-
-a:last-child {
-  border-radius: 0 3px 3px 0;
-}
-
-.left {
+.viewport-controls a {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
   float: left;
+  clear: left;
+  text-align: center;
+  vertical-align: middle;
+  opacity: .5;
 }
 
-.right {
-  float: right;
-  a {
-    border-radius: 3px;
-  }
+.viewport-controls a.selected, .viewport-controls .orientation-toggle {
+  opacity: 1;
 }
 
-section {
-  min-width: 100%;
-  min-height: 90%;
-  background-color: #888;
-  overflow: hidden;
-  margin-top: 55px;
+.workspace {
+  background-image: url(../images/subtle_dots_@2x.png);
+  background-size: 27px 15px;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 72px;
+  text-align: center;
+  box-shadow: 3px 0 10px rgba(0,0,0,.1);
+  border-radius: 0 10px 10px 0;
+  padding: 30px;
 }
 
 .frame-wrapper {
@@ -83,32 +61,32 @@ section {
   -webkit-transition: all .25s ease-out;
   -moz-transition: all .25s ease-out;
   transition: all .25s ease-out;
+  border: 1px solid #aaa;
 }
 
-.device-inner {
+.frame-inner {
   -webkit-transition: all .25s ease-out;
   -moz-transition: all .25s ease-out;
   transition: all .25s ease-out;
 }
 
-.mobile, .tablet {
-  background: #333;
-  margin: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.5),
-    inset -2px -2px 0 #000,
-    inset 2px 2px 0 rgba(255,255,255,.4);
+.mobile, .tablet, .desktop {
+  background: #f3f3f3;
   position: relative;
   overflow: hidden;
-  &:before {
-    content: "";
-    position: absolute;
-    top: -100px;
-    left: -250px;
-    width: 800px;
-    height: 230px;
-    -webkit-transform: rotate(-50deg);
-    background: -webkit-linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.3));
-  }
+}
+
+.mobile, .tablet {
+  margin: 30px;
+}
+
+.desktop {
+  padding: 50px 0 0;
+  border-radius: 5px;
+}
+
+.desktop .frame {
+  border-radius: 0 0 5px 5px;
 }
 
 .mobile {
@@ -125,7 +103,7 @@ section {
   padding: 20px 90px;
 }
 
-.ss-iframe {
+.frame {
   width: 100%;
   height: 100%;
   -webkit-transition: all .25s ease-out;
@@ -133,4 +111,5 @@ section {
   transition: all .25s ease-out;
   border: none;
   background-color: #fff;
+  display: block;
 }
