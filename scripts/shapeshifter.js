@@ -54,7 +54,7 @@ $(document).on('click', '.orientation-toggle', function(event) {
 });
 
 $(document).ready(function(){
-  if (window.location.pathname == '/'){
-    $('.frame').attr('src', 'docs.html');
+  if (window.location.origin != 'http://cobyism.com/'){
+    $('.frame').attr('src', '../');
   }
 });
