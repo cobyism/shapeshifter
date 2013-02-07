@@ -71,6 +71,7 @@ header {
   -moz-transition: all .25s ease-out;
   transition: all .25s ease-out;
   border: 1px solid #aaa;
+  box-shadow: 0 3px 10px rgba(0,0,0,.1), inset 0 1px 0 #fff;
 }
 
 .frame-inner {
@@ -103,6 +104,10 @@ header {
   border-radius: 25px;
 }
 
+.mobile .frame {
+  box-shadow: 0 0 0 1px #aaa, 0 2px 0 #fff;
+}
+
 .iphone-4 {
   padding: 106px 12px 109px;
 }
@@ -127,6 +132,7 @@ header {
 
 .desktop .frame {
   border-radius: 0 0 5px 5px;
+  box-shadow: 0 -1px 0 #aaa;
 }
 
 .iphone-4 {
