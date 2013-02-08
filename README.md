@@ -58,8 +58,8 @@ so forth.
 
 I’d love to receive contributions from anyone who cares to contribute. It
 doesn’t matter how big or small your contribution is—whether it’s fixing a typo,
-or proposing an overhaul to the whole project—I’ll gladly take a look
-at your change, and merge it in (within reason).
+adding a feature, or proposing an overhaul to the whole project—I’ll gladly
+take a look at your change, and merge it in (within reason).
 
 ## License
 
