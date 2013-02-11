@@ -13,6 +13,9 @@ $(document).on('click', '.set-desktop', function(event) {
     .removeClass('ipad')
     .addClass('desktop');
   $('.orientation-toggle').addClass('disabled')
+  if (Modernizr.localstorage){
+    localStorage.setItem('shapeshifter-device', 'desktop');
+  }
 });
 
 $(document).on('click', '.set-mobile', function(event) {
@@ -27,6 +30,9 @@ $(document).on('click', '.set-iphone-4', function(event) {
     .removeClass('iphone-5')
     .removeClass('ipad')
     .addClass('iphone-4');
+  if (Modernizr.localstorage){
+    localStorage.setItem('shapeshifter-device', 'iphone-4');
+  }
 });
 
 $(document).on('click', '.set-iphone-5', function(event) {
@@ -34,6 +40,9 @@ $(document).on('click', '.set-iphone-5', function(event) {
     .removeClass('iphone-4')
     .removeClass('ipad')
     .addClass('iphone-5');
+  if (Modernizr.localstorage){
+    localStorage.setItem('shapeshifter-device', 'iphone-5');
+  }
 });
 
 $(document).on('click', '.set-ipad', function(event) {
@@ -41,6 +50,9 @@ $(document).on('click', '.set-ipad', function(event) {
     .removeClass('iphone-4')
     .removeClass('iphone-5')
     .addClass('ipad');
+  if (Modernizr.localstorage){
+    localStorage.setItem('shapeshifter-device', 'ipad');
+  }
 });
 
 $(document).on('click', '.orientation-toggle', function(event) {
@@ -48,9 +60,15 @@ $(document).on('click', '.orientation-toggle', function(event) {
     if ($('.frame-wrapper').hasClass('landscape')){
       $('.frame-wrapper').removeClass('landscape');
       $('.controls').removeClass('landscape');
+      if (Modernizr.localstorage){
+        localStorage.setItem('shapeshifter-orientation', 'portrait');
+      }
     } else {
       $('.frame-wrapper').addClass('landscape');
       $('.controls').addClass('landscape');
+      if (Modernizr.localstorage){
+        localStorage.setItem('shapeshifter-orientation', 'landscape');
+      }
     }
   }
 });
@@ -58,6 +76,16 @@ $(document).on('click', '.orientation-toggle', function(event) {
 $(document).ready(function(){
   if (window.location.origin != 'http://cobyism.com'){
     $('.frame').attr('src', '../');
+  }
+  if (Modernizr.localstorage){
+    device = localStorage.getItem('shapeshifter-device');
+    orientation = localStorage.getItem('shapeshifter-orientation');
+    $("body").removeClass('transitions');
+    $(".set-" + device).click();
+    if (orientation == "landscape"){
+      $(".orientation-toggle").click();
+    }
+    $("body").addClass('transitions');
   }
 });
 
