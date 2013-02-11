@@ -88,6 +88,13 @@ header {
   display: block;
 }
 
+.frame-wrapper:before,
+.frame-wrapper:after {
+  content: "";
+  position: absolute;
+  background: #ccc;
+}
+
 /* Device specific styles */
 
 .mobile, .desktop {
@@ -132,6 +139,15 @@ header {
   box-shadow: 0 -1px 0 #aaa;
 }
 
+.desktop:before {
+  top: 16px;
+  left: 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 25px 0 0 #ccc, 50px 0 0 #ccc;
+}
+
 .iphone-4 {
   width: 320px;
   height: 480px;
@@ -161,6 +177,52 @@ header {
 .ipad.landscape {
   height: 768px;
   width: 1024px;
+}
+
+.iphone-4:before,
+.iphone-5:before {
+  top: 60px;
+  width: 50px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.iphone-4:after,
+.iphone-5:after {
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.iphone-4:before, .iphone-4:after {
+  left: 148px;
+}
+.iphone-5:before, .iphone-5:after {
+  left: 154px;
+}
+
+.iphone-4.landscape:before,
+.iphone-5.landscape:before {
+  bottom: 43%;
+  left: 60px;
+  width: 5px;
+  height: 50px;
+}
+
+.ipad:before {
+  top: 30px;
+  left: 47.15%;
+  width: 50px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.ipad.landscape:before {
+  bottom: 47.15%;
+  left: 30px;
+  width: 5px;
+  height: 50px;
 }
 
 /* Orientation toggle */
