@@ -16,19 +16,20 @@ header {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 72px;
+  width: 92px;
   text-align: center;
+  background: #D9D1C7;
 }
 
 .controls {
   display: inline-block;
-  margin: 10px 0 0;
+  margin: 25px 0 0;
 }
 
 .controls a {
   width: 32px;
   height: 32px;
-  margin: 5px;
+  margin: 5px 5px 20px;
   float: left;
   clear: left;
   text-align: center;
@@ -39,23 +40,21 @@ header {
   opacity: .5;
 }
 
-.controls a.selected, .controls .orientation-toggle {
+.controls a.selected, .controls .orientation-toggle, .controls .set-location {
   opacity: 1;
 }
 
 /* Workspace and frames */
 
 .workspace {
-  background: #ddd;
+  background: #F2EDE4;
   overflow: auto;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 72px;
+  right: 92px;
   text-align: center;
-  box-shadow: 3px 0 10px rgba(0,0,0,.1);
-  border-radius: 0 10px 10px 0;
   padding: 30px;
 }
 
@@ -97,7 +96,6 @@ header {
 }
 
 .mobile {
-  margin: 30px;
   border-radius: 25px;
 }
 

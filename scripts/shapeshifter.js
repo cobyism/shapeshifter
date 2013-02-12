@@ -82,7 +82,7 @@ $(document).on('click', '.set-location', function(event) {
 });
 
 $(document).ready(function(){
-  if (window.location.origin != 'http://cobyism.com'){
+  if (window.location.origin != 'http://cobyism.com' && window.location.href != 'http://localhost:4000/'){
     $('.frame').attr('src', '../');
   }
   if (Modernizr.localstorage){
