@@ -73,6 +73,14 @@ $(document).on('click', '.orientation-toggle', function(event) {
   }
 });
 
+$(document).on('click', '.set-location', function(event) {
+  var url;
+  url = prompt("Enter a new URL to browse to:");
+  if (url.length > 0){
+    $('.frame').attr('src', url);
+  }
+});
+
 $(document).ready(function(){
   if (window.location.origin != 'http://cobyism.com'){
     $('.frame').attr('src', '../');
@@ -96,3 +104,4 @@ $(document).bind('keydown', 'alt+shift+i', function(){$('.set-iphone-4').click()
 $(document).bind('keydown', 'alt+shift+o', function(){$('.set-iphone-5').click()});
 $(document).bind('keydown', 'alt+shift+p', function(){$('.set-ipad').click()});
 $(document).bind('keydown', 'alt+shift+l', function(){$('.orientation-toggle').click()});
+$(document).bind('keydown', 'alt+shift+g', function(){$('.set-location').click()});

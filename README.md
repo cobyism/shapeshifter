@@ -5,6 +5,18 @@ Here’s [a demonstration](http://cobyism.com/shapeshifter).
 
 ![Shapeshifter](http://cl.ly/MatS/shapeshifter-demo.gif)
 
+### Keyboard Shortcuts
+
+In the demonstration above (and when using Shapeshifter yourself), the
+following keyboard shortcuts are available:
+
+- `alt-shift-u`: Browser viewport
+- `alt-shift-i`: iPhone 3G/4 viewport
+- `alt-shift-o`: iPhone 5 viewport
+- `alt-shift-p`: iPad viewport
+- `alt-shift-l`: Rotate viewport (only available for mobile viewports)
+- `alt-shift-g`: Go to a new location
+
 ## Why use Shapeshifter?
 
 Responsive design for the web requires thought throughout **the entire** design
@@ -18,7 +30,7 @@ pay constant attention to your design and how it behaves in various common
 viewport sizes. My goal is for Shapeshifter to become an in-browser testing
 environment that stays with you throughout all stages of your projects.
 
-## How do I use this thing?
+## How do I install this thing?
 
 This project is still in its early stages, so the actual usage is far from
 polished. Ideally you should be able to use this in a number of ways.
