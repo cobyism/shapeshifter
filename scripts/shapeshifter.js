@@ -75,7 +75,7 @@ $(document).on('click', '.orientation-toggle', function(event) {
 
 $(document).on('click', '.set-location', function(event) {
   var url;
-  url = prompt("Enter a new URL to browse to:");
+  url = prompt("Enter a new URL to browse to:", "http://");
   if (url.length > 0){
     $('.frame').attr('src', url);
   }
