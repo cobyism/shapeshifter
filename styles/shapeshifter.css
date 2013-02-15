@@ -45,6 +45,10 @@ header {
   opacity: 1;
 }
 
+a img {
+  border: none; /* For IE */
+}
+
 /* Workspace and frames */
 
 .workspace {
