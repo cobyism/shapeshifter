@@ -95,7 +95,20 @@ $(document).ready(function(){
     }
     $("body").addClass('transitions');
   }
+  if (getUrlParam('url') != ""){
+    $('.frame').attr('src', getUrlParam('url'));
+  }
 });
+
+function getUrlParam(name){
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+  var results = regex.exec(window.location.search);
+  if(results == null)
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
 /* Keyboard shortcuts */
 
