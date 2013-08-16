@@ -1,0 +1,97 @@
+/* Resets */
+
+* { box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+h1, h2, h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+a {
+ text-decoration: none;
+}
+
+/* Header */
+
+header {
+  background: #c00;
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  color: #400;
+  letter-spacing: -1px;
+  margin: 0;
+  text-transform: lowercase;
+  text-shadow: 0 1px 0 #e00;
+}
+
+.tagline {
+  font-size: 24px;
+}
+
+.shapeshifter-logo {
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 480px){
+  .branding .shapeshifter-logo {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+  }
+  .branding img,
+  .branding h1 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+/* Intro */
+
+.intro {
+  background: #ffd6d6;
+  font-size: 21px;
+  line-height: 1.4em;
+}
+
+/* Buttons */
+
+.button {
+  border-radius: 5px;
+  background: #efefef;
+  background-image: -moz-linear-gradient(#FCFCFC, #EFEFEF);
+  background-image: -webkit-linear-gradient(#FCFCFC, #EFEFEF);
+  background-image: -ms-linear-gradient(#FCFCFC, #EFEFEF);
+  background-image: linear-gradient(#FCFCFC, #EFEFEF);
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+  color: #400;
+  padding: 8px 16px;
+  text-shadow: 0 1px 0 #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: .5em;
+}
+
+.button:hover, .button:focus {
+  outline: none;
+  border: 1px solid rgba(255,0,0,.5);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 0 10px rgba(255,0,0,.3);
+}
